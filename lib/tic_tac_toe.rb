@@ -31,11 +31,12 @@ class TicTacToe
     end
   end
   def turn()
-    puts "It is #{current_player}'s turn! Enter a number between 1-9 to chose a spot."
+    player = current_player
+    puts "It is #{player}'s turn! Enter a number between 1-9 to chose a spot."
     input = gets
     index = input_to_index(input)
     if valid_move?(index)
-      move(index, current_player)
+      move(index, player)
       display_board
     else
       puts "This move is invalid! Enter a number between 1-9 to chose a spot."
