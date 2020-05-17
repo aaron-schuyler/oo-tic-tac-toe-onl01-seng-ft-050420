@@ -15,7 +15,7 @@ class TicTacToe
     return i - 1
   end
   def move(i, token = "X")
-    @board[input_to_index(i)] = token
+    @board[i] = token
   end
   def position_taken?(i)
     if @board[i] != " "
@@ -25,10 +25,15 @@ class TicTacToe
     end
   end
   def valid_move?(i)
-    if i <= 0 && i >= 8 && @board[i] == " "
+    if i <= 0 && i >= 8 && !position_taken?(i)
       return true
     else
       return false
     end
   end
+  def turn()
+    
+  end
+  def turn_count
+    
 end
