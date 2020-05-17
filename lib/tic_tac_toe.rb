@@ -35,11 +35,12 @@ class TicTacToe
     puts "It is #{player}'s turn! Enter a number between 1-9 to chose a spot."
     input = gets
     index = input_to_index(input)
-    while do
+    wait = true
+    while wait do
     if valid_move?(index)
       move(index, player)
       display_board
-      break
+      wait = false
     else
       puts "This move is invalid! Enter a number between 1-9 to chose a spot."
       input = gets
