@@ -35,12 +35,17 @@ class TicTacToe
     puts "It is #{player}'s turn! Enter a number between 1-9 to chose a spot."
     input = gets
     index = input_to_index(input)
+    while do
     if valid_move?(index)
       move(index, player)
       display_board
+      break
     else
       puts "This move is invalid! Enter a number between 1-9 to chose a spot."
+      input = gets
+      index = input_to_index(input)
     end
+  end
   end
   def turn_count
     @board.count{|token| token == "X" || token == "O"}
