@@ -15,6 +15,15 @@ class TicTacToe
     return i - 1
   end
   def move(i, token = "X")
-    
+    @board[input_to_index(i)] = token
   end
+  def position_taken?(i)
+    if @board[i] != " "
+      return true
+    else
+      return false
+    end
+  end
+  def valid_move?(i)
+    
 end
