@@ -49,7 +49,9 @@ class TicTacToe
   end
   def won?
     WIN_COMBINATIONS.each do |set|
-      
+      if (set.include?("X") && !set.include?("O") && !set.include?(" ")) || (set.include?("O") && !set.include?("X") && !set.include?(" "))
+      return set
+      break
     end
       
   end
