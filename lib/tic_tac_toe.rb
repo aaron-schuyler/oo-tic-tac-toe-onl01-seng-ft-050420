@@ -37,4 +37,34 @@ class TicTacToe
   def turn_count
     @board.count{|token| token == "X" || token == "O"}
   end
+  def current_player
+    turn_count % 2 == 0 ? "X" : "O"
+  end
+  def won?
+    
+  end
+  def full?
+    if turn_count == 9
+      return true
+    else
+      return false
+    end
+  end
+  def draw?
+    if full? && !won?
+      return true
+    else
+      return false
+    end
+  end
+  def over?
+    if won? || draw?
+      return true
+    else
+      return false
+    end
+  end
+  def winner
+    
+  end
 end
