@@ -32,6 +32,7 @@ class TicTacToe
     end
   end
   def turn()
+    puts "It is #{current_player}'s turn! Enter a number between 1-9 to chose a spot."
     
   end
   def turn_count
@@ -65,6 +66,18 @@ class TicTacToe
     end
   end
   def winner
-    
+    if won?
+      return @board[won?[0]]
+    end
+  end
+  def play 
+    while !over? do
+      
+    end
+    if won?
+      puts "Player #{winner} has won the game!"
+    elsif draw?
+      puts "The game is a draw."
+    end
   end
 end
