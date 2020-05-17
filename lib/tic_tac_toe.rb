@@ -48,7 +48,10 @@ class TicTacToe
     turn_count % 2 == 0 ? "X" : "O"
   end
   def won?
-    
+    WIN_COMBINATIONS.each do |set|
+      
+    end
+      
   end
   def full?
     if turn_count == 9
