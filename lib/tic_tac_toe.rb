@@ -59,9 +59,8 @@ class TicTacToe
       if (set.include?("X") && !set.include?("O") && !set.include?(" ")) || (set.include?("O") && !set.include?("X") && !set.include?(" "))
         winning_set = set
       end
-      return winning_set
     end
-      
+    return winning_set
   end
   def full?
     if turn_count == 9
